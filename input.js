@@ -1,10 +1,21 @@
+let connetion;
+
 const handleUserInput = key => {
   if (key === "\u0003") {
     process.exit();
+  } else if(key === "w"){
+    connetion.write('Move: up')
+  } else if(key === "a"){
+    connetion.write('Move: left')
+  } else if(key === "s"){
+    connetion.write('Move: down')
+  } else if(key === "d"){
+    connetion.write('Move: right')
   }
 };
 
-const setupInput = function() {
+const setupInput = function(conn) {
+  connetion = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
