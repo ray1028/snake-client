@@ -11,6 +11,8 @@ const handleUserInput = key => {
     connetion.write('Move: down')
   } else if(key === "d"){
     connetion.write('Move: right')
+  } else { 
+    connetion.write('Say: Hello');
   }
 };
 
